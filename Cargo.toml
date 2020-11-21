@@ -1,0 +1,21 @@
+[package]
+name = "runebender"
+version = "0.2.0"
+authors = ["Raph Levien <raph.levien@gmail.com>", "Colin Rofls <colin.rofls@gmail.com>"]
+license = "Apache-2.0"
+edition = "2018"
+
+[dependencies]
+norad = { version = "0.2.0", features = ["druid", "rayon"] }
+druid = "0.6"
+log = "0.4.8"
+plist = "1.0"
+serde = "1.0"
+serde_derive = "1.0"
+lopdf = "0.24.0"
+svg = "0.8.0"
+chrono = "0.4"
+
+[patch.crates-io]
+druid = { version = "0.6.0", git = "https://github.com/linebender/druid.git", rev = "31d4bdf9" }
+

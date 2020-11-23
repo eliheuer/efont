@@ -8,7 +8,7 @@ use druid::{Color, Data, HotKey, KeyEvent, Rect, SysMods, WidgetPod};
 use crate::consts;
 use crate::tools::ToolId;
 
-const TOOLBAR_ITEM_SIZE: Size = Size::new(40.0, 40.0);
+const TOOLBAR_ITEM_SIZE: Size = Size::new(50.0, 50.0);
 const TOOLBAR_ITEM_PADDING: f64 = 2.0;
 const TOOLBAR_ICON_PADDING: f64 = 5.0;
 const TOOLBAR_BORDER_STROKE_WIDTH: f64 = 2.0;
@@ -406,9 +406,38 @@ fn measure_path() -> BezPath {
 
     // TODO: design icon
     bez.move_to((0.0, 0.0));
-    bez.line_to((200.0, 0.0));
-    bez.line_to((200.0, 20.0));
-    bez.line_to((0.0, 20.0));
+    bez.line_to((50.0, 0.0));
+    bez.line_to((50.0, 200.0));
+    bez.line_to((0.0, 200.0));
     bez.close_path();
+
+    bez.move_to((50.0, 175.0));
+    bez.line_to((30.0, 175.0));
+    bez.close_path();
+
+    bez.move_to((50.0, 150.0));
+    bez.line_to((25.0, 150.0));
+    bez.close_path();
+
+    bez.move_to((50.0, 125.0));
+    bez.line_to((30.0, 125.0));
+    bez.close_path();
+
+    bez.move_to((50.0, 100.0));
+    bez.line_to((20.0, 100.0));
+    bez.close_path();
+
+    bez.move_to((50.0, 75.0));
+    bez.line_to((30.0, 75.0));
+    bez.close_path();
+
+    bez.move_to((50.0, 50.0));
+    bez.line_to((25.0, 50.0));
+    bez.close_path();
+
+    bez.move_to((50.0, 25.0));
+    bez.line_to((30.0, 25.0));
+    bez.close_path();
+
     bez
 }

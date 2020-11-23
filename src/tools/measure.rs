@@ -12,14 +12,14 @@ pub struct Measure {
     line: Option<Line>,
 }
 
-const MEASURE_LINE_STROKE_COLOR: Color = Color::rgb8(0x73, 0x9B, 0xCB);
-const MEASURE_INFO_BG_COLOR: Color = Color::rgb8(0x70, 0x70, 0x70);
-const MEASURE_INFO_FG_COLOR: Color = Color::rgb8(0xf8, 0xf8, 0xf8);
+const MEASURE_LINE_STROKE_COLOR: Color = Color::rgb8(0xff, 0x99, 0x00);
+const MEASURE_INFO_BG_COLOR: Color = Color::rgb8(0xff, 0x99, 0x70);
+const MEASURE_INFO_FG_COLOR: Color = Color::rgb8(0x55, 0x55, 0x55);
 const MEASURE_INFO_ONCURVE_COLOR: Color = Color::rgb8(0x80, 0x80, 0xe0);
 const MEASURE_INFO_OFFCURVE_COLOR: Color = Color::rgb8(0x60, 0xc0, 0x60);
 const MEASURE_INFO_DELTA_COLOR: Color = Color::rgb8(0xa0, 0x20, 0x20);
-const MEASURE_INFO_FONT_SIZE: f64 = 9.0;
-const MEASURE_INTERSECTION_RADIUS: f64 = 3.0;
+const MEASURE_INFO_FONT_SIZE: f64 = 14.0;
+const MEASURE_INTERSECTION_RADIUS: f64 = 6.0;
 
 // Don't report segments smaller than this.
 const MEASURE_FUZZY_TOLERANCE: f64 = 0.1;
@@ -151,7 +151,7 @@ impl Tool for Measure {
             } else {
                 Vec2::new(-14.0, 8.0)
             };
-            ctx.stroke(line, &MEASURE_LINE_STROKE_COLOR, 1.0);
+            ctx.stroke(line, &MEASURE_LINE_STROKE_COLOR, 2.0);
             let label = format!("{:.1}°", angle);
             draw_info_bubble(ctx, line.p1 + angle_offset, label);
             // TODO: compute earlier than paint

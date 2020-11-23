@@ -125,7 +125,7 @@ impl Tool for Rectangle {
     fn paint(&mut self, ctx: &mut PaintCtx, data: &EditSession, env: &Env) {
         const LABEL_PADDING: f64 = 4.0;
         if let Some(rect) = self.current_drag_rect(data) {
-            ctx.stroke(rect, &Color::BLACK, 1.0);
+            ctx.stroke(rect, &Color::rgb8(230, 25, 75), 2.0);
             let (start, current) = self.pts_for_rect().unwrap();
             let size = start - current;
             let label_text = format!("{}, {}", size.x.abs(), size.y.abs());

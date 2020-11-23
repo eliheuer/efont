@@ -38,21 +38,32 @@ pub mod colors {
 }
 
 pub fn configure_env(env: &mut Env) {
-    env.set(SIDEBAR_BACKGROUND, colors::LIGHT_GREY);
-    env.set(SIDEBAR_EDGE_STROKE, colors::SIDEBAR_EDGE);
-    env.set(PLACEHOLDER_GLYPH_COLOR, colors::LIGHT_GREY);
-    env.set(GLYPH_LIST_STROKE, colors::LIGHT_GREY);
-    env.set(GLYPH_LIST_BACKGROUND, Color::WHITE);
-    env.set(PRIMARY_TEXT_COLOR, Color::BLACK);
-    env.set(SECONDARY_TEXT_COLOR, colors::MEDIUM_GREY);
-    env.set(SELECTION_RECT_STROKE_COLOR, colors::LIGHT_BLUE);
-    env.set(SELECTION_RECT_FILL_COLOR, colors::TRANSPARENT_LIGHT_GREY);
-    env.set(druid::theme::SELECTION_COLOR, colors::HIGHLIGHT_COLOR);
-    env.set(druid::theme::LABEL_COLOR, Color::BLACK);
-    env.set(druid::theme::WINDOW_BACKGROUND_COLOR, Color::WHITE);
-    env.set(druid::theme::BACKGROUND_LIGHT, colors::LIGHT_GREY);
+    //env.set(SIDEBAR_BACKGROUND, colors::LIGHT_GREY);
+    //env.set(SIDEBAR_EDGE_STROKE, colors::SIDEBAR_EDGE);
+    //env.set(PLACEHOLDER_GLYPH_COLOR, colors::LIGHT_GREY);
+    //env.set(GLYPH_LIST_STROKE, colors::LIGHT_GREY);
+    //env.set(GLYPH_LIST_BACKGROUND, Color::WHITE);
+    //env.set(PRIMARY_TEXT_COLOR, Color::BLACK);
+    //env.set(SECONDARY_TEXT_COLOR, colors::MEDIUM_GREY);
+    //env.set(SELECTION_RECT_STROKE_COLOR, colors::LIGHT_BLUE);
+    //env.set(SELECTION_RECT_FILL_COLOR, colors::TRANSPARENT_LIGHT_GREY);
+
+    env.set(SIDEBAR_BACKGROUND, Color::rgb8(0x22, 0x22, 0x22));
+    env.set(SIDEBAR_EDGE_STROKE, Color::rgb8(0x44, 0x44, 0x44));
+    env.set(PLACEHOLDER_GLYPH_COLOR, Color::rgb8(0x99, 0x99, 0x99));
+    env.set(GLYPH_LIST_STROKE, Color::rgb8(0x00, 0x00, 0x00));
+    env.set(GLYPH_LIST_BACKGROUND, Color::rgb8(0x00, 0x00, 0x00));
+    env.set(PRIMARY_TEXT_COLOR, Color::rgb8(0xff, 0xff, 0xff));
+    env.set(SECONDARY_TEXT_COLOR, Color::rgb8(0xaa, 0xaa, 0xaa));
+    env.set(SELECTION_RECT_STROKE_COLOR, Color::rgb8(0x00, 0xff, 0x99));
+    env.set(SELECTION_RECT_FILL_COLOR, Color::rgba8(0x22, 0xff, 0x22, 0x55));
+
+    env.set(druid::theme::SELECTION_COLOR, Color::rgb8(0xff, 0x77, 0x00));
+    env.set(druid::theme::LABEL_COLOR, Color::rgb8(0xff, 0x55, 0x00));
+    env.set(druid::theme::WINDOW_BACKGROUND_COLOR, Color::BLACK);
+    env.set(druid::theme::BACKGROUND_LIGHT, Color::rgb8(0x00, 0x00, 0x00));
     env.set(druid::theme::CURSOR_COLOR, Color::BLACK);
     env.set(druid::theme::BUTTON_DARK, Color::grey8(200));
     env.set(druid::theme::BUTTON_LIGHT, Color::WHITE);
-    env.set(UI_DETAIL_FONT, FontDescriptor::default().with_size(12.0));
+    env.set(UI_DETAIL_FONT, FontDescriptor::default().with_size(14.0));
 }

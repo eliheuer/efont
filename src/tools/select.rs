@@ -67,7 +67,7 @@ impl Tool for Select {
         match &self.drag {
             DragState::Select { rect, .. } => {
                 ctx.fill(rect, &env.get(theme::SELECTION_RECT_FILL_COLOR));
-                ctx.stroke(rect, &selection_stroke, 1.0);
+                ctx.stroke(rect, &selection_stroke, 2.0);
             }
             // draw the selection bounding box
             DragState::None if data.selection.len() > 1 => {

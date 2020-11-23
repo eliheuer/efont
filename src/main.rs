@@ -43,7 +43,7 @@ fn main() {
     let state = get_initial_state();
 
     let main_window = WindowDesc::new(make_ui)
-        .title(LocalizedString::new("Runebender"))
+        .title(LocalizedString::new("eFont"))
         .menu(menus::make_menu(&state))
         .window_size(Size::new(900.0, 800.0));
 
